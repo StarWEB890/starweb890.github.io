@@ -80,6 +80,10 @@ function pjax() {
     <link href='https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css' rel='stylesheet'>
   
 	
+    
+      <link rel="stylesheet" href="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/waline.css"></script>
+  
+  
 
   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
@@ -213,18 +217,39 @@ function pjax() {
     
     
     
+    <div id="waline" class="waline"></div>
+    <script>
+      function load_waline() {
+          setTimeout(function() {
+              var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+              var src = 'https://unpkg.com/@waline/client/dist/waline.js'
+              var script = document.createElement('script')
+              script.setAttribute('type','text/javascript')
+              script.onload = function() {
+                 pjax_waline()
+              }
+              script.setAttribute('src', src)
+              HEAD.appendChild(script)
+          }, 1);
+      };
+      function pjax_waline() {
+          if(!document.querySelectorAll("#waline")[0])return;
+          Waline.init({
+                   el: '#waline',
+                   serverURL: 'https://wle.xsnetw.cf',
+                   pageSize: '10',
+                   placeholder: '',
+                   emoji: ["//unpkg.com/@waline/emojis@1.0.1/weibo","//unpkg.com/@waline/emojis@1.0.1/bilibili","https://emoji.shojo.cn/bili/src/枕边童话","https://emoji.shojo.cn/bili/src/咩栗","https://emoji.shojo.cn/bili/src/呜米","https://emoji.shojo.cn/bili/src/多多poi","https://emoji.shojo.cn/bili/src/穆小泠","https://emoji.shojo.cn/bili/src/扶桑大红花","https://emoji.shojo.cn/bili/src/进击的冰糖","https://emoji.shojo.cn/bili/src/冰糖IO 蜕变·闪耀","https://emoji.shojo.cn/bili/src/蕾尔娜Leona"],
+                   login: 'force',
+          });
+      }
+      load_waline();
+      document.addEventListener('pjax:complete', function () {
+          pjax_waline();
+      });
+      </script>
       
-        <script src="https://cdn.jsdelivr.net/npm/discuss@1.0.4"></script>
-        <div id="Discuss-Comments"></div>
-        <script>
-          // 初始化
-          discuss.init({
-            el: '#Discuss-Comments',
-            serverURLs: 'https://sin-go-discuss.vercel.app',
-            lang: 'cn'
-          })
-        </script>
-        
+      
 </section>
 	
 </article>
