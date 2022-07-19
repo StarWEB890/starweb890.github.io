@@ -280,22 +280,32 @@ function pjax() {
 
   <section class='m_widget links'>
 <div class='header'>天气</div>
-<div class='content' style="padding: 4px;background: rgba(90,90,90,0.6);">
-  <div id="tp-weather-widget"></div>
-  <script>
-    (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
-    window.SeniverseWeatherWidget('show', {
-      flavor: "slim",
-      location: "WX4FBXXFKE4F",
-      geolocation: true,
-      language: "auto",
-      unit: "c",
-      theme: "auto",
-      token: "4cb56d24-7322-4e0c-9792-4af10364cfdc",
-      hover: "enabled",
-      container: "tp-weather-widget"
-    })
-  </script>
+<div class='content'>
+    <div id="he-plugin-simple"></div>
+    <script>
+    WIDGET = {
+      "CONFIG": {
+        "modules": "01234",
+        "background": "1",
+        "tmpColor": "FFFFFF",
+        "tmpSize": "16",
+        "cityColor": "FFFFFF",
+        "citySize": "16",
+        "aqiColor": "FFFFFF",
+        "aqiSize": "16",
+        "weatherIconSize": "24",
+        "alertIconSize": "18",
+        "padding": "10px 10px 10px 10px",
+        "shadow": "0",
+        "language": "auto",
+        "fixed": "false",
+        "vertical": "top",
+        "horizontal": "left",
+        "key": "a22c1a5c164c480787b33e39ec909586"
+      }
+    }
+    </script>
+    <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
 </div>
 </section>
 

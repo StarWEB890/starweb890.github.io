@@ -216,7 +216,8 @@ function pjax() {
 
   </section>
   <section class="article typo">
-	  <h1 id="Hexo-Theme-SinGO"><a href="#Hexo-Theme-SinGO" class="headerlink" title="Hexo Theme SinGO"></a>Hexo Theme SinGO</h1><p>一款基于<a target="_blank" rel="noopener" href="https://github.com/ShanaMaid/hexo-theme-shana/">hexo-theme-shana</a>修改 <del>（重做）</del> 的主题<br>开源地址：<a target="_blank" rel="noopener" href="https://github.com/StarWEB890/hexo-theme-singo">https://github.com/StarWEB890/hexo-theme-singo</a></p>
+	  <h1 id="Hexo-Theme-SinGO"><a href="#Hexo-Theme-SinGO" class="headerlink" title="Hexo Theme SinGO"></a>Hexo Theme SinGO</h1><p><a target="_blank" rel="noopener" href="https://www.oscs1024.com/project/StarWEB890/hexo-theme-singo?ref=badge_small"><img src="https://www.oscs1024.com/platform/badge/StarWEB890/hexo-theme-singo.svg?size=small" alt="OSCS Status"></a>   <a target="_blank" rel="noopener" href="https://github.com/StarWEB890/hexo-theme-singo/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-brightgreen" alt="MIT"></a></p>
+<p>一个基于<a target="_blank" rel="noopener" href="https://github.com/stkevintan/hexo-theme-material-flow">hexo-theme-material-flow</a><del>重做</del>修改的主题</p>
 
     
 	  <div class="readmore">
@@ -295,22 +296,32 @@ function pjax() {
 
   <section class='m_widget links'>
 <div class='header'>天气</div>
-<div class='content' style="padding: 4px;background: rgba(90,90,90,0.6);">
-  <div id="tp-weather-widget"></div>
-  <script>
-    (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
-    window.SeniverseWeatherWidget('show', {
-      flavor: "slim",
-      location: "WX4FBXXFKE4F",
-      geolocation: true,
-      language: "auto",
-      unit: "c",
-      theme: "auto",
-      token: "4cb56d24-7322-4e0c-9792-4af10364cfdc",
-      hover: "enabled",
-      container: "tp-weather-widget"
-    })
-  </script>
+<div class='content'>
+    <div id="he-plugin-simple"></div>
+    <script>
+    WIDGET = {
+      "CONFIG": {
+        "modules": "01234",
+        "background": "1",
+        "tmpColor": "FFFFFF",
+        "tmpSize": "16",
+        "cityColor": "FFFFFF",
+        "citySize": "16",
+        "aqiColor": "FFFFFF",
+        "aqiSize": "16",
+        "weatherIconSize": "24",
+        "alertIconSize": "18",
+        "padding": "10px 10px 10px 10px",
+        "shadow": "0",
+        "language": "auto",
+        "fixed": "false",
+        "vertical": "top",
+        "horizontal": "left",
+        "key": "a22c1a5c164c480787b33e39ec909586"
+      }
+    }
+    </script>
+    <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
 </div>
 </section>
 
