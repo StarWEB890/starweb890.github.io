@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Rita2 Online（ROL） | SinGO博客</title>
+  <meta name="description" content="害怕孤独，但又享受孤独" />
+  <meta name="keywords" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/">
+  <link rel="alternate" href="/atom.xml" title="SinGO博客" type="application/atom+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Rita2 Online是啥？想必你们有看过Zia（BilibiliUID：481036862）的这个视频：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rita2 Online（ROL）">
+<meta property="og:url" content="http://www.xsnetw.cf/posts/26258/index.html">
+<meta property="og:site_name" content="SinGO博客">
+<meta property="og:description" content="Rita2 Online是啥？想必你们有看过Zia（BilibiliUID：481036862）的这个视频：">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/images/msedge_30eyswwvBc.4pydewavrkm0.webp">
+<meta property="og:image" content="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/images/msedge_rXPfU2CIwr.1ppuu40tq2g0.webp">
+<meta property="article:published_time" content="2022-07-02T02:04:41.000Z">
+<meta property="article:modified_time" content="2022-07-12T06:43:27.578Z">
+<meta property="article:author" content="StarInno">
+<meta property="article:tag" content="旧设备访问">
+<meta property="article:tag" content="Rita2">
+<meta property="article:tag" content="在线视频">
+<meta property="article:tag" content="在线音乐">
+<meta property="article:tag" content="在线游戏">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/images/msedge_30eyswwvBc.4pydewavrkm0.webp">
+    
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  
+    <link href='https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+  
+	
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+<meting-js 
+	server="netease" 
+	type="playlist" 
+	id="7515491376"
+	fixed="true" 
+	autoplay="true"
+	loop="all"
+	order="random"
+	preload="auto"
+	list-folded="true">
+</meting-js>
+  
+
+  
+<link rel="stylesheet" href="/style.css">
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <!- 添加一个加载提示 ->
+<loader>
+    <div class="plane"></div>
+</loader>
+
+  
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script>
+
+ // 对所有链接跳转事件绑定pjax容器container
+
+ $(document).pjax('a[target!=_blank]', '#pjax-container', {fragment:'#pjax-container', timeout:8000})
+ $(document).on('pjax:complete', function() {
+    var search_path = "search.xml";
+        if (search_path.length == 0) {
+            search_path = "search.xml";
+        }
+        var path = "/" + search_path;
+        searchFunc(path, 'local-search-input', 'local-search-result');
+})
+
+$(document).on('pjax:send', function() { 
+    $(".plane").css("display", "block");//pjax链接点击后显示加载动画；
+});
+$(document).on('pjax:complete', function() { 
+    $(".plane").css("display", "none");//pjax链接加载完成后隐藏加载动画；
+});
+
+function pjax() {
+  /*因为下面的postdetails_js中的有个判断空指针的，如果加上就不能左移，如果去掉会报错，所以把这个放在首行来执行。*/
+  /*现在已经解决,可以放在任意的位置*/
+  /*
+      之前一直是好的突然有次就不好了，后来解决了右边sidebar滚轮效果消失的效果之后，突然又好了。
+      原因是因为，之前放在detail js的下面，而detail的下面undfind的判断时报错的，所以不会往下走。
+  */
+  /*判断#lv-container是否为空，目前这是我找到最好的办法，因为不判断，进入首页或其他的页面会空指针异常。*/
+  if ($("#lv-container").length > 0 ) {
+    $(".comments").css({opacity: 1});
+    $.getScript("https://cdn-city.livere.com/js/embed.dist.js");
+  }
+  //不蒜子js
+  $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+    //bootstap
+    $.getScript("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js");
+    //wow
+    $.getScript("//apps.bdimg.com/libs/wow/0.1.6/wow.min.js");
+ 
+
+}
+</script>
+  
+  <script>setLoadingBarProgress(20)</script> 
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				SinGO博客
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li style="margin: 0 10px 0 0px;">
+							<a class='flat-box nav-Home' href='/'>
+								主页
+							</a>
+						</li>
+					
+						<li style="margin: 0 10px 0 0px;">
+							<a class='flat-box nav-Archives' href='/archives'>
+								归档
+							</a>
+						</li>
+					
+						<li style="margin: 0 10px 0 0px;">
+							<a class='flat-box nav-About' href='/about'>
+								关于
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<span class="icon icon-search"></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search flat-box"></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu flat-box"></span></a></li>
+			</ul>
+		</div>
+		
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/" class="nav-Home nav">
+				主页
+			</a>
+		
+			<a href="/archives" class="nav-Archives nav">
+				归档
+			</a>
+		
+			<a href="/about" class="nav-About nav">
+				关于
+			</a>
+		
+	</nav>
+</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div id="pjax-container" class='l_main'>
+        <article id="post-Rita2 Online"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/posts/26258/">
+    	Rita2 Online（ROL）
+    </a>
+  </h2>
+	<time>
+	  7月 2, 2022
+	</time>
+	
+    
+    <div class='cats'>
+        <a href="/categories/Rita2/">Rita2</a>
+    </div>
+
+	</section>
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<h2 id="Rita2-Online是啥？"><a href="#Rita2-Online是啥？" class="headerlink" title="Rita2 Online是啥？"></a>Rita2 Online是啥？</h2><p>想必你们有看过<a target="_blank" rel="noopener" href="https://space.bilibili.com/481036862/">Zia（BilibiliUID：481036862）</a>的这个视频：</p>
+<span id="more"></span>
+
+<iframe src="//player.bilibili.com/player.html?aid=384077983&bvid=BV1LZ4y187TC&cid=720783084&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"style="width: 100%;height: 27.5em;"> </iframe>
+
+
+<p>但由于POL在Edge访问的时候有BUG：<br>1.侧边栏有很大概率会跳转到新页面<br>2.edge无法使用网页播放POL的在线视频</p>
+<p>为了解决这个痛点，我<del>经过他同意的情况下</del>(其实不用经过他同意)搭建了与POL相同但另有特点的网站：Rita2 Online（以下简称：“ROL”）</p>
+<h2 id="ROL与POL相比"><a href="#ROL与POL相比" class="headerlink" title="ROL与POL相比"></a>ROL与POL相比</h2><p>1.在原先POL的基础下，音乐新增了四条线路：swf线路（和rm线路一样，只在IE显示，其它在非IE的浏览器显示）、H5线路、备用H5（仅限音乐、电台）、和普通线路<br><del>2.游戏添加swf游戏和mud游戏</del>（还没做完）</p>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/images/msedge_30eyswwvBc.4pydewavrkm0.webp" alt="ROL首页"></p>
+<p><img src="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/images/msedge_rXPfU2CIwr.1ppuu40tq2g0.webp" alt="ROL主页"></p>
+<h2 id="进入Rita2-Online"><a href="#进入Rita2-Online" class="headerlink" title="进入Rita2 Online"></a>进入Rita2 Online</h2><p><a target="_blank" rel="noopener" href="http://www.rita2.ml/">进入ROL</a></p>
+
+  	</div>
+	  
+	  <div class="article-tags tags">
+      
+        <a href="/tags/%E6%97%A7%E8%AE%BE%E5%A4%87%E8%AE%BF%E9%97%AE/">旧设备访问</a>
+      
+        <a href="/tags/Rita2/">Rita2</a>
+      
+        <a href="/tags/%E5%9C%A8%E7%BA%BF%E8%A7%86%E9%A2%91/">在线视频</a>
+      
+        <a href="/tags/%E5%9C%A8%E7%BA%BF%E9%9F%B3%E4%B9%90/">在线音乐</a>
+      
+        <a href="/tags/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/">在线游戏</a>
+      
+	  </div>
+    
+		
+	
+		<div class="art-item-footer">
+				
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>上一篇：<a href="/posts/53958/" rel="prev"  title="Hexo-theme-SinGO">
+						Hexo-theme-SinGO 
+					</a></span>
+				
+				
+					<span class="art-item-right">下一篇：<a href="/posts/35605/" rel="next"  title="Rita2 RChat聊天室">
+						Rita2 RChat聊天室
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	</section>
+	
+        <section>
+    
+    
+    
+      
+        <script src="https://cdn.jsdelivr.net/npm/discuss@1.0.4"></script>
+        <div id="Discuss-Comments"></div>
+        <script>
+          // 初始化
+          discuss.init({
+            el: '#Discuss-Comments',
+            serverURLs: 'https://sin-go-discuss.vercel.app',
+            lang: 'cn'
+          })
+        </script>
+        
+</section>
+	
+</article>
+<script>
+	window.subData = {
+		title: 'Rita2 Online（ROL）',
+		tools: true
+	}
+</script>
+
+      </div>
+      <aside class='l_side'>
+        
+  <section class='m_widget about'>
+
+<div class='header'>StarInno</div>
+<div class='content'>
+<div class='desc'>别人被孤独折磨，我却是享受孤独</div>
+</div>
+</section>
+
+  <section class='m_widget links'>
+<div class='header'>社交账号</div>
+<div class='content'>
+    <ul class="entry">
+    
+        <li><a class="flat-box" target="_blank" href="https://github.com/StarWEB890">
+            <div class='name'><i class="fa fa-github" aria-hidden="true"></i>&nbsp;Github</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="/atom.xml">
+            <div class='name'><i class="fa fa-rss" aria-hidden="true"></i>&nbsp;RSS订阅</div>
+        </a></li>
+    
+    </ul>
+</div>
+</section>
+
+  <section class='m_widget categories'>
+<div class='header'>分类</div>
+<div class='content'>
+    
+    <ul class="entry">
+    
+        <li><a class="flat-box" href="/categories/Hexo/"><div class='name'>Hexo</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Rita2/"><div class='name'>Rita2</div><div class='badget'>3</div></a></li>
+    
+    </ul>
+    
+</div>
+</section>
+
+  
+<div class="m_widget tagcloud">
+    <div class="header">标签</div>
+    <div class='content'>
+        <a href="/tags/Hexo/" style="font-size: 17px; color: #404040">Hexo</a> <a href="/tags/Rita2/" style="font-size: 20px; color: #000">Rita2</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/" style="font-size: 14px; color: #808080">博客主题</a> <a href="/tags/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/" style="font-size: 14px; color: #808080">在线游戏</a> <a href="/tags/%E5%9C%A8%E7%BA%BF%E8%A7%86%E9%A2%91/" style="font-size: 14px; color: #808080">在线视频</a> <a href="/tags/%E5%9C%A8%E7%BA%BF%E9%9F%B3%E4%B9%90/" style="font-size: 14px; color: #808080">在线音乐</a> <a href="/tags/%E5%BE%AE%E5%8D%9A/" style="font-size: 14px; color: #808080">微博</a> <a href="/tags/%E6%97%A7%E8%AE%BE%E5%A4%87%E8%AE%BF%E9%97%AE/" style="font-size: 20px; color: #000">旧设备访问</a> <a href="/tags/%E7%BB%9F%E8%AE%A1/" style="font-size: 14px; color: #808080">统计</a> <a href="/tags/%E8%81%8A%E5%A4%A9%E5%AE%A4/" style="font-size: 14px; color: #808080">聊天室</a>
+    </div>
+</div>
+
+
+
+  <section class='m_widget links'>
+<div class='header'>天气</div>
+<div class='content' style="padding: 4px;background: rgba(90,90,90,0.6);">
+  <div id="tp-weather-widget"></div>
+  <script>
+    (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+    window.SeniverseWeatherWidget('show', {
+      flavor: "slim",
+      location: "WX4FBXXFKE4F",
+      geolocation: true,
+      language: "auto",
+      unit: "c",
+      theme: "auto",
+      token: "4cb56d24-7322-4e0c-9792-4af10364cfdc",
+      hover: "enabled",
+      container: "tp-weather-widget"
+    })
+  </script>
+</div>
+</section>
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+  <div>
+  Copyright &copy; 2022 StarInno. All Rights Reserved.<br>
+  
+    <a href="https://icp.gov.moe/?keyword=20210071" target="_blank">萌ICP备20210071号</a>
+    <br>
+  
+  
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">
+      <i class="fa fa-user"></i> 总访问量：<span id="busuanzi_value_site_pv"></span>次
+  </span> |
+  <span id="busuanzi_container_site_uv">
+    <i class="fa fa-eye"></i> 访客数量：<span id="busuanzi_value_site_uv"></span>人次
+  </span>
+  <br>
+  
+  <i class="fa fa-clock-o" aria-hidden="true"></i>
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+  <script>
+      var now = new Date();
+      function createtime() {
+          var grt= new Date("12/1/2021 00:00:00");
+          now.setTime(now.getTime()+250);
+          days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+          hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+          if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+          mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+          seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+          snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+          document.getElementById("timeDate").innerHTML = "本站已运行："+dnum+" 天 ";
+          document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+      }
+  setInterval("createtime()",250);
+  </script>
+  <br>
+  Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> | Themes <a target="_blank" rel="noopener" href="https://github.com/StarWEB890/hexo-theme-singo">SinGO</a>
+  <br>
+  <br>
+  </div>
+  
+</footer>
+
+  <script>setLoadingBarProgress(80);</script>
+  
+  <script type="text/javascript" color="#888888" opacity='1' zIndex="-2" count="100" src="/js/canvas-nest.min.js"></script> 
+
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+
+<script src="/js/jquery.fitvids.js"></script>
+
+<script>
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var ALGOLIA_API_KEY = "";
+	var ALGOLIA_APP_ID = "";
+	var ALGOLIA_INDEX_NAME = "";
+  var AZURE_SERVICE_NAME = "";
+  var AZURE_INDEX_NAME = "";
+  var AZURE_QUERY_KEY = "";
+  var BAIDU_API_ID = "";
+  var SEARCH_SERVICE = "hexo";
+  var ROOT = "/"||"/";
+  if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+
+<script src="/js/search.js"></script>
+
+
+<script src="/js/app.js"></script>
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

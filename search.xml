@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Visit-Stat使用教程</title>
+      <link href="/posts/54175/"/>
+      <url>/posts/54175/</url>
+      
+        <content type="html"><![CDATA[<p>（别在意为啥要把它分类到Hexo。。。。）</p><span id="more"></span><h1 id="服务端部署"><a href="#服务端部署" class="headerlink" title="服务端部署"></a>服务端部署</h1><h2 id="数据库部分"><a href="#数据库部分" class="headerlink" title="数据库部分"></a>数据库部分</h2><p>MongoDB 和 Redis 之间选一个</p><h3 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h3><p>1.申请 <a href="https://www.mongodb.com/cloud/atlas/register">MongoDB</a> 账号<br>2.创建免费 MongoDB 数据库，区域推荐选择 AWS &#x2F; N. Virginia (us-east-1)<br>3.在 Clusters 页面点击 CONNECT，按步骤设置允许所有 IP 地址的连接（<a href="https://vercel.com/support/articles/how-to-allowlist-deployment-ip-address">为什么？</a>），创建数据库用户，并记录数据库连接字符串，请将连接字符串中的 <code>&lt;password&gt;</code> 修改为数据库密码<br><del><code>跟Twikoo评论配置数据库的方式一样</code></del>（除非你选的Redis）</p><h3 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h3><p>1.申请 <a href="https://upstash.com/">upstash</a> 账号<br>2.点击Create Database（名字随便选，Type建议选择：Global）<br><del>3.直接复制“redis:&#x2F;&#x2F;”为开头的地址（前面的“redis-cli –tls -u ”不用复制下去）</del></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2022-07-18注意：</span><br><span class="line">要复制 Node 那栏的链接，详情请看：https://github.com/Lete114/Visit-Stat/issues/2</span><br></pre></td></tr></table></figure><h2 id="Vercel部分"><a href="#Vercel部分" class="headerlink" title="Vercel部分"></a>Vercel部分</h2><p>1.一键部署<br><a href="https://vercel.com/new/clone?repository-url=https://github.com/Lete114/Visit-Stat/tree/Vercel"><img src="https://vercel.com/button" alt="Deploy with Vercel"></a><br>2.部署完成后点击“Go to Dashboard”<br><img src="https://git.poker/StarWEB890/TuChuang/blob/master/images/msedge_NrjWxOjR8v.6j61smrqfl40.webp?raw=true"><br>3.点击“Settings” ———&gt; “Environment Variables”<br><img src="https://git.poker/StarWEB890/TuChuang/blob/master/images/msedge_WaEBQMBuSY.5fbj00qiugg0.webp?raw=true"><br>4.添加<code>VS_DB_TYPE</code>和<code>VS_DB_URL</code>两个变量<br><img src="https://git.poker/StarWEB890/TuChuang/blob/master/images/msedge_hiMoqGi0NS.5wzep764sxw0.webp?raw=true" alt="VS_DB_TYPE 设置"><br><img src="https://git.poker/StarWEB890/TuChuang/blob/master/images/msedge_EzlRyQz2yk.19wmwh8uozsw.webp?raw=true" alt="VS_DB_URL 设置"><br>5.重新部署<br><img src="https://git.poker/StarWEB890/TuChuang/blob/master/images/msedge_hZTVVKgZaD.45dtozvjmv60.webp?raw=true"><br><img src="https://git.poker/StarWEB890/TuChuang/blob/master/images/msedge_6R4ocLPTa9.14wqq7448wg0.webp?raw=true"><br><img src="https://git.poker/StarWEB890/TuChuang/blob/master/images/msedge_btXSdB5kuI.3l0rde1drrq0.webp?raw=true"><br><img src="https://git.poker/StarWEB890/TuChuang/blob/master/images/msedge_WgGrSOcqQ5.1vchu63i4dq8.webp?raw=true"><br>服务端部署完成！</p><h1 id="客户端使用"><a href="#客户端使用" class="headerlink" title="客户端使用"></a>客户端使用</h1><p>将 <a href="https://github.com/Lete114/Visit-Stat/blob/main/dist/visit-stat.min.js">dist&#x2F;visit-stat.min.js</a> 内的 <code>//localhost:6870</code> 服务端地址替换为你自己部署的服务端地址，然后在主题目录下的<code>layout/layout.ejs</code>引用即可</p><p>返回的数据会主动寻找标签 id 属性为:vs_site_uv, vs_site_pv, vs_page_pv的标签并替换内容。不懂请看 <a href="https://github.com/Lete114/Visit-Stat/blob/main/public/index.html">public&#x2F;index.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 统计 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo-theme-SinGO</title>
+      <link href="/posts/53958/"/>
+      <url>/posts/53958/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Hexo-Theme-SinGO"><a href="#Hexo-Theme-SinGO" class="headerlink" title="Hexo Theme SinGO"></a>Hexo Theme SinGO</h1><p>一款基于<a href="https://github.com/ShanaMaid/hexo-theme-shana/">hexo-theme-shana</a>修改 <del>（重做）</del> 的主题<br>开源地址：<a href="https://github.com/StarWEB890/hexo-theme-singo">https://github.com/StarWEB890/hexo-theme-singo</a></p><span id="more"></span><h2 id="与hexo-theme-shana相比："><a href="#与hexo-theme-shana相比：" class="headerlink" title="与hexo-theme-shana相比："></a>与hexo-theme-shana相比：</h2><p>1.由于原主题是原作者为庆贺夏娜酱2016年加冕萌王而制作的，而且animation也很多，低配手机在移动端访问的时候可能会出现卡顿，所以删去GalMenu和bganimation（如果想要的话我可以加回来）等内容，背景换成由<a href="https://www.loliapi.com/">LoliAPI</a>提供的 随机调用二次元图片API<br><del>（毕竟二次元内容越来越丰富，不可能只有夏娜酱一个吧，但她也有可能成为时代的眼泪了……）</del><br>2.由于原先的主题没有pjax，所以我添加了pjax，把和pjax冲突的wow删去了<br><del>我现在怀疑我不是修改这个主题，而是把整个主题推翻重做了。。。。</del><br>3.删去原先的搜索功能，改用本地搜索<br>4.删去友言、Disqus评论，新增Waline、Gitalk评论（为啥删去disqus？我看原主题的_config.yml没有disqus这个选项，就把它删去了。毕竟disqus在国内被墙了。。。）<br>5.添加网页在线聊天系统<br>6.添加不蒜子计数器（我一直都喜欢用这个）<br>7.添加网站天气预报<br>8.添加网页播放音乐<br>9.添加萌ICP备案（PS：仅提供萌站长交流！不是真正的中国备案！）<br>10.添加顶部栏<br>11.去掉网页鼠标指针</p><h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><p><img src="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/images/msedge_wmU4dIlJjH.591jwk3e7zk0.webp" alt="主页"><br><img src="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/images/msedge_yvUcsKcGpB.1tj45k0kcn9c.webp" alt="主页+Chatra+和风天气"><br><img src="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/images/msedge_1kdQdEPMdm.1hz08g118p4w.webp" alt="主页+心知天气"><br><img src="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/images/msedge_P051Qkvd2c.48w206dorua0.webp" alt="归档页+APlayer"><br><img src="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/images/msedge_XffYi8c6o2.3tozmmqph3o0.webp" alt="分类页"><br><img src="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/images/msedge_6gYkIb2anS.395bt75ieou0.webp" alt="标签页"></p><h2 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h2><p>1.安装主题</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 普通线路</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/StarWEB890/hexo-theme-singo.git themes/singo</span><br><span class="line"><span class="comment"># FastGit加速线路</span></span><br><span class="line">git <span class="built_in">clone</span> https://hub.fastgit.xyz/StarWEB890/hexo-theme-singo.git themes/singo</span><br><span class="line"><span class="comment"># github.91chi.fun加速线路</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.91chi.fun/https://github.com/StarWEB890/hexo-theme-singo.git themes/singo</span><br></pre></td></tr></table></figure><p>2.安装插件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 普通线路</span></span><br><span class="line">npm install hexo-generator-feed --save</span><br><span class="line">npm install hexo-generator-search --save</span><br><span class="line"><span class="comment"># cnpm加速线路（需要安装cnpm）</span></span><br><span class="line"><span class="comment"># 安装cnpm：npm install -g cnpm --registry=https://registry.npmmirror.com</span></span><br><span class="line">cnpm install hexo-generator-feed --save</span><br><span class="line">cnpm install hexo-generator-search --save</span><br></pre></td></tr></table></figure><p>3.同时将themes&#x2F;singo&#x2F;_source&#x2F;的tags、categories和search文件夹拷贝到hexo根目录下的source文件夹下</p><p>4.修改根目录下的_config.yml</p><p>①修改theme为singo</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">singo</span></span><br></pre></td></tr></table></figure><p>②在末尾添加：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">plugins:</span> <span class="string">hexo-generate-feed</span></span><br><span class="line"></span><br><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br></pre></td></tr></table></figure><h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> themes/singo</span><br><span class="line">git pull origin master</span><br></pre></td></tr></table></figure><h2 id="启用数学公式"><a href="#启用数学公式" class="headerlink" title="启用数学公式"></a>启用数学公式</h2><p>1.卸载<code>hexo-renderer-marked</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br></pre></td></tr></table></figure><p>2.安装<code>hexo-renderer-markdown-it-plus</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 普通线路</span></span><br><span class="line">npm install hexo-renderer-markdown-it-plus --save</span><br><span class="line"><span class="comment"># cnpm加速线路（需要安装cnpm）</span></span><br><span class="line">cnpm install hexo-renderer-markdown-it-plus --save</span><br></pre></td></tr></table></figure><p>3.在需要启用数学公式的博客的head添加math: true</p><p>4.编辑根目录下的_config.yml,在最后添加：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">markdown_it_plus:</span></span><br><span class="line">  <span class="attr">highlight:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">html:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">xhtmlOut:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">breaks:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">langPrefix:</span></span><br><span class="line">  <span class="attr">linkify:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">typographer:</span></span><br><span class="line">  <span class="attr">quotes:</span> <span class="string">“”‘’</span></span><br><span class="line">  <span class="attr">pre_class:</span> <span class="string">highlight</span></span><br></pre></td></tr></table></figure><h2 id="自定义代码高亮"><a href="#自定义代码高亮" class="headerlink" title="自定义代码高亮"></a>自定义代码高亮</h2><p>编辑<code>hexo-theme-shana\source\css_partial\highlight.styl</code></p><p><img src="https://user-images.githubusercontent.com/20333903/28317264-c8a80a28-6bf8-11e7-88f9-f1ef542f5118.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 博客主题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Rita2 Online（ROL）</title>
+      <link href="/posts/26258/"/>
+      <url>/posts/26258/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Rita2-Online是啥？"><a href="#Rita2-Online是啥？" class="headerlink" title="Rita2 Online是啥？"></a>Rita2 Online是啥？</h2><p>想必你们有看过<a href="https://space.bilibili.com/481036862/">Zia（BilibiliUID：481036862）</a>的这个视频：</p><span id="more"></span><iframe src="//player.bilibili.com/player.html?aid=384077983&bvid=BV1LZ4y187TC&cid=720783084&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"style="width: 100%;height: 27.5em;"> </iframe><p>但由于POL在Edge访问的时候有BUG：<br>1.侧边栏有很大概率会跳转到新页面<br>2.edge无法使用网页播放POL的在线视频</p><p>为了解决这个痛点，我<del>经过他同意的情况下</del>(其实不用经过他同意)搭建了与POL相同但另有特点的网站：Rita2 Online（以下简称：“ROL”）</p><h2 id="ROL与POL相比"><a href="#ROL与POL相比" class="headerlink" title="ROL与POL相比"></a>ROL与POL相比</h2><p>1.在原先POL的基础下，音乐新增了四条线路：swf线路（和rm线路一样，只在IE显示，其它在非IE的浏览器显示）、H5线路、备用H5（仅限音乐、电台）、和普通线路<br><del>2.游戏添加swf游戏和mud游戏</del>（还没做完）</p><h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/images/msedge_30eyswwvBc.4pydewavrkm0.webp" alt="ROL首页"></p><p><img src="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/images/msedge_rXPfU2CIwr.1ppuu40tq2g0.webp" alt="ROL主页"></p><h2 id="进入Rita2-Online"><a href="#进入Rita2-Online" class="headerlink" title="进入Rita2 Online"></a>进入Rita2 Online</h2><p><a href="http://www.rita2.ml/">进入ROL</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Rita2 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 旧设备访问 </tag>
+            
+            <tag> Rita2 </tag>
+            
+            <tag> 在线视频 </tag>
+            
+            <tag> 在线音乐 </tag>
+            
+            <tag> 在线游戏 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Rita2 RChat聊天室</title>
+      <link href="/posts/35605/"/>
+      <url>/posts/35605/</url>
+      
+        <content type="html"><![CDATA[<h2 id="RChat在线聊天室是啥？"><a href="#RChat在线聊天室是啥？" class="headerlink" title="RChat在线聊天室是啥？"></a>RChat在线聊天室是啥？</h2><p>RChat在线聊天室是Rita2官方的在线聊天平台，有精简版和高级版。<br>如果说RTalk填补了塞班或其它老平台对社交网络的空缺，那么RChat就是实现了QQ的某些功能，让你能随时随地的跟别人聊天 <del>（废话）</del></p><span id="more"></span><h2 id="图片展示"><a href="#图片展示" class="headerlink" title="图片展示"></a>图片展示</h2><p><img src="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/images/msedge_UGQluALZNK.29yl6wnbpqv4.webp" alt="主页" title="主页"></p><p><img src="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/images/msedge_pRSh49rj22.6odfd7hjb500.webp" alt="RChat 精简版登陆页面" title="RChat 精简版登陆页面"><br><img src="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/images/msedge_gwCt8fMzkp.6dfv6mz651k0.webp" alt="RChat 精简版聊天室页面" title="RChat 精简版聊天室页面"></p><p><img src="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/images/msedge_ZSKjKebZ5T.38aerunvsm00.webp" alt="RChat 高级版登陆页面" title="RChat 高级版登陆页面"><br><img src="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/images/msedge_K25tj8IKvV.3qalk763knm0.webp" alt="RChat 高级版“选择聊天室”页面" title="RChat 高级版“选择聊天室”页面"><br><img src="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/images/msedge_66dHznZsFf.41cvw0mvlk80.webp" alt="RChat 高级版聊天室页面（非IE）" title="RChat 高级版聊天室页面（非IE）"><br><img src="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/images/msedge_Rn9TWdbxYR.xuiau9pooe8.webp" alt="RChat 高级版聊天室页面（IE）" title="RChat 高级版聊天室页面（IE）"></p><h2 id="已知问题"><a href="#已知问题" class="headerlink" title="已知问题"></a>已知问题</h2><p>1.由于精简版的源码和高级版的源码是两个不同的源码，所以两个版本的账号数据没法同步（就是说高级版的账号无法登录到精简版，精简版的账号无法登录到高级版）<br>2.由于这个也是用穿透映射上去的（因为这个聊天室用的是ASP源码），所以例行维护的时候会出现“The page you requested was not found.”，这个属于正常现象，不放心的话可以评论或者加入Rita2官方Q群（虽然我不是管理）：<a href="https://jq.qq.com/?_wv=1027&k=oavF4liW">744050793</a></p><h2 id="进入RChat聊天室"><a href="#进入RChat聊天室" class="headerlink" title="进入RChat聊天室"></a>进入RChat聊天室</h2><p><a href="http://rchat.rita2.ml/">RChat主页</a> | <a href="http://rchat.rita2.ml/noflash">精简版（其它设备推荐）</a> | <a href="http://rchat.rita2.ml/flash/">高级版（电脑推荐，IE访问需要FlashPlayer）</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Rita2 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 旧设备访问 </tag>
+            
+            <tag> 聊天室 </tag>
+            
+            <tag> Rita2 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Rita2 RTalk微博</title>
+      <link href="/posts/41161/"/>
+      <url>/posts/41161/</url>
+      
+        <content type="html"><![CDATA[<h2 id="什么是Rita2？"><a href="#什么是Rita2？" class="headerlink" title="什么是Rita2？"></a>什么是Rita2？</h2><p>Rita原先指的是zia家的猫（zia跟我一样是旧设备网站的站长，之前有合作关系，<a href="https://space.bilibili.com/481036862/">他的BilibiliUID：481036862</a>）,2指的是他的第二个网站的名字</p><span id="more"></span><h2 id="RTalk微博可以干啥？"><a href="#RTalk微博可以干啥？" class="headerlink" title="RTalk微博可以干啥？"></a>RTalk微博可以干啥？</h2><p>Rtalk微博是Rita2官方的移动微博平台，有3G版和WAP版，它填补了塞班或其它老平台对社交网络的空缺，您可以在上面发文字，发图片，与人交谈甚至可以做更多，并且上手无任何的难度。</p><h2 id="图片展示"><a href="#图片展示" class="headerlink" title="图片展示"></a>图片展示</h2><p><img src="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/images/20220701.788v6qockpg0.webp" alt="RTalk WAP" title="RTalk WAP"></p><p><img src="https://cdn.staticaly.com/gh/StarWEB890/TuChuang@master/images/msedge_p3TNTMmvVN.19ywfh6vs9xc.webp" alt="RTalk 3G" title="RTalk 3G"></p><h2 id="已知问题"><a href="#已知问题" class="headerlink" title="已知问题"></a>已知问题</h2><p>1.3G版无法注册，电脑版、WAP版可以注册（旧设备可能要到WAP版那边注册。。。。）<br>2.由于这个是用穿透映射上去的（部署到虚拟主机里会出现503错误，而且这个太占数据库），所以例行维护的时候会出现“The page you requested was not found.”，这个属于正常现象，不放心的话可以联系我或者加入Rita2官方Q群（虽然我不是管理）：<a href="https://jq.qq.com/?_wv=1027&k=oavF4liW">744050793</a></p><h2 id="进入RTalk微博"><a href="#进入RTalk微博" class="headerlink" title="进入RTalk微博"></a>进入RTalk微博</h2><p><a href="http://rtalk.rita2.ml/">电脑版</a> | <a href="http://rtalk.rita2.ml/wap">WAP版</a> | <a href="http://rtalk.rita2.ml/mobile">3G版</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Rita2 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 旧设备访问 </tag>
+            
+            <tag> Rita2 </tag>
+            
+            <tag> 微博 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
