@@ -75,13 +75,13 @@
     
     <category term="旧设备访问" scheme="http://www.xsnetw.cf/tags/%E6%97%A7%E8%AE%BE%E5%A4%87%E8%AE%BF%E9%97%AE/"/>
     
-    <category term="Rita2" scheme="http://www.xsnetw.cf/tags/Rita2/"/>
-    
     <category term="在线视频" scheme="http://www.xsnetw.cf/tags/%E5%9C%A8%E7%BA%BF%E8%A7%86%E9%A2%91/"/>
     
     <category term="在线音乐" scheme="http://www.xsnetw.cf/tags/%E5%9C%A8%E7%BA%BF%E9%9F%B3%E4%B9%90/"/>
     
     <category term="在线游戏" scheme="http://www.xsnetw.cf/tags/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="Rita2" scheme="http://www.xsnetw.cf/tags/Rita2/"/>
     
   </entry>
   
@@ -102,9 +102,9 @@
     
     <category term="旧设备访问" scheme="http://www.xsnetw.cf/tags/%E6%97%A7%E8%AE%BE%E5%A4%87%E8%AE%BF%E9%97%AE/"/>
     
-    <category term="聊天室" scheme="http://www.xsnetw.cf/tags/%E8%81%8A%E5%A4%A9%E5%AE%A4/"/>
-    
     <category term="Rita2" scheme="http://www.xsnetw.cf/tags/Rita2/"/>
+    
+    <category term="聊天室" scheme="http://www.xsnetw.cf/tags/%E8%81%8A%E5%A4%A9%E5%AE%A4/"/>
     
   </entry>
   

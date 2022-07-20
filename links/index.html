@@ -59,13 +59,12 @@ function pjax() {
 <meta property="og:site_name" content="SinGO博客">
 <meta property="og:description" content=".links-content{          margin-top:1rem;          }          .link-navigation::after {          content: &quot; &quot;;          display: block;          clear: both;          }          .">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/hvnobug/assets/common/avatar.png">
-<meta property="og:image" content="https://yingwiki.top/avatar">
+<meta property="og:image" content="https://seayj.cn/medias/logo.png">
 <meta property="article:published_time" content="2021-06-15T16:34:27.000Z">
-<meta property="article:modified_time" content="2022-07-17T09:04:04.378Z">
+<meta property="article:modified_time" content="2022-07-20T09:03:57.076Z">
 <meta property="article:author" content="StarInno">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/hvnobug/assets/common/avatar.png">
+<meta name="twitter:image" content="https://seayj.cn/medias/logo.png">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -137,20 +136,32 @@ function pjax() {
 				<ul class='h-list'>
 					
 						<li>
-							<a class='flat-box nav-home' href='/'>
-								主页
+							<a class='flat-box nav' href='/'>
+								<i class="fa fa-home" aria-hidden="true"></i>&nbsp;主页
 							</a>
 						</li>
 					
 						<li>
-							<a class='flat-box nav-archives' href='/archives'>
-								归档
+							<a class='flat-box nav' href='/archives/'>
+								<i class="fa fa-archive" aria-hidden="true"></i>&nbsp;归档
 							</a>
 						</li>
 					
 						<li>
-							<a class='flat-box nav-about' href='/about'>
-								关于
+							<a class='flat-box nav' href='/links/'>
+								<i class="fa fa-paper-plane-o" aria-hidden="true"></i>&nbsp;友链
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav' href='/about/'>
+								<i class="fa fa-user-o" aria-hidden="true"></i>&nbsp;关于
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav' href='/update/'>
+								<i class="fa fa-history" aria-hidden="true"></i>&nbsp;更新日志
 							</a>
 						</li>
 					
@@ -184,16 +195,24 @@ function pjax() {
 <aside class="menu-phone">
 	<nav>
 		
-			<a href="/" class="nav-home nav">
+			<a href="/" class="nav-fa fa-home nav">
 				主页
 			</a>
 		
-			<a href="/archives" class="nav-archives nav">
+			<a href="/archives/" class="nav-fa fa-archive nav">
 				归档
 			</a>
 		
-			<a href="/about" class="nav-about nav">
+			<a href="/links/" class="nav-fa fa-paper-plane-o nav">
+				友链
+			</a>
+		
+			<a href="/about/" class="nav-fa fa-user-o nav">
 				关于
+			</a>
+		
+			<a href="/update/" class="nav-fa fa-history nav">
+				更新日志
 			</a>
 		
 	</nav>
@@ -286,27 +305,22 @@ function pjax() {
       <div class="links-content">
          <div class="link-navigation">
             <div class="card">
-               <img class="ava" src="https://cdn.jsdelivr.net/gh/hvnobug/assets/common/avatar.png" />
+               <img class="ava" src="https://seayj.cn/medias/logo.png" />
                <div class="card-header">
                   <div>
-                     <a target="_blank" rel="noopener" href="https://blog.hvnobug.com/">Emil’s blog</a>
+                     <a target="_blank" rel="noopener" href="https://seayj.cn">SeaYJ's Blog</a>
                   </div>
-                  <div class="info">这是一个分享IT技术的小站。</div>
-               </div>
-            </div>
-            <div class="card">
-               <img class="ava" src="https://yingwiki.top/avatar" />
-               <div class="card-header">
-                  <div>
-                     <a target="_blank" rel="noopener" href="https://yingwiki.top">越行勤's Blog</a>
-                  </div>
-                  <div class="info">努力学习的小菜鸟</div>
+                  <div class="info">追随大佬的脚步越走越远...</div>
                </div>
             </div>
          </div>
       </div>
    </div>
 </div>
+
+<p>欢迎跟我添加友链！</p>
+<p><strong>友链格式：</strong></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">SinGO博客</span></span><br><span class="line">  <span class="attr">site:</span> <span class="string">https://www.xsnetw.cf</span></span><br><span class="line">  <span class="attr">info:</span> <span class="string">害怕孤独，却享受孤独</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">https://www.xsnetw.cf/images/avatar.jpg</span></span><br></pre></td></tr></table></figure>
   	</div>
 	  
 		
