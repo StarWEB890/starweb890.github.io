@@ -6,7 +6,7 @@
   <link href="http://www.xsnetw.cf/atom.xml" rel="self"/>
   
   <link href="http://www.xsnetw.cf/"/>
-  <updated>2022-07-22T09:13:52.634Z</updated>
+  <updated>2022-07-24T11:27:38.835Z</updated>
   <id>http://www.xsnetw.cf/</id>
   
   <author>
@@ -17,11 +17,26 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Artitalk+CFWorker配置教程</title>
+    <link href="http://www.xsnetw.cf/posts/7406/"/>
+    <id>http://www.xsnetw.cf/posts/7406/</id>
+    <published>2022-07-24T09:48:35.000Z</published>
+    <updated>2022-07-24T11:27:38.835Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://artitalk.js.org/&quot;&gt;Artitalk官网&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>我在Anti群里的那些事</title>
     <link href="http://www.xsnetw.cf/posts/64815/"/>
     <id>http://www.xsnetw.cf/posts/64815/</id>
     <published>2022-07-22T08:16:20.000Z</published>
-    <updated>2022-07-22T09:13:52.634Z</updated>
+    <updated>2022-07-22T09:15:07.422Z</updated>
     
     
     <summary type="html">&lt;p&gt;认识Rita2已经快一年了（依稀记得它的前身：Prism），我是通过Rita2认识的Anti&lt;br&gt;&lt;del&gt;（实不相瞒，Anti的后端是我搞的）&lt;/del&gt;&lt;/p&gt;

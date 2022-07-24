@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Tag: Hexo | SinGO博客</title>
+  <title>笔记 | SinGO博客</title>
   <meta name="description" content="害怕孤独，但又享受孤独" />
   <meta name="keywords" content="" />
   <meta name="HandheldFriendly" content="True" />
@@ -52,13 +52,15 @@ function pjax() {
 }
 </script>
   
-  <meta name="description" content="害怕孤独，但又享受孤独">
+  <meta name="description" content="function load_artitalk() {     setTimeout(function() {         var HEAD &#x3D; document.getElementsByTagName(&#39;head&#39;)[0] || document.documentElement;         var src &#x3D; &#39;https:&#x2F;&#x2F;unpkg.com&#x2F;artitalk&#39;">
 <meta property="og:type" content="website">
-<meta property="og:title" content="SinGO博客">
-<meta property="og:url" content="http://www.xsnetw.cf/tags/Hexo/index.html">
+<meta property="og:title" content="笔记">
+<meta property="og:url" content="http://www.xsnetw.cf/note/index.html">
 <meta property="og:site_name" content="SinGO博客">
-<meta property="og:description" content="害怕孤独，但又享受孤独">
+<meta property="og:description" content="function load_artitalk() {     setTimeout(function() {         var HEAD &#x3D; document.getElementsByTagName(&#39;head&#39;)[0] || document.documentElement;         var src &#x3D; &#39;https:&#x2F;&#x2F;unpkg.com&#x2F;artitalk&#39;">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-06T08:33:35.000Z">
+<meta property="article:modified_time" content="2022-07-24T11:43:08.956Z">
 <meta property="article:author" content="StarInno">
 <meta name="twitter:card" content="summary">
     
@@ -210,112 +212,64 @@ function pjax() {
   <div class="l_body">
     <div class='container clearfix'>
       <div id="pjax-container" class='l_main'>
-        
-  <script>
-    window.subData= { title:'Tag : Hexo'}
-  </script>
-
-<section class="post-list">
+        <article id="page-"
+  class="animated rubberBand slideInRight post white-box article-type-page"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/note/index.html">
+    	笔记
+    </a>
+  </h2>
+	<time>
+	  7月 6, 2022
+	</time>
 	
-    <div class='post-wrapper'>
-      <article class="animated rubberBand slideInRight  post reveal" style="visibility: visible;
-  -webkit-transform: scale(1);
-  opacity: 1;
-  transform: scale(1);
-  opacity: 1;
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-  transition: transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/posts/54175/">
-        Visit-Stat使用教程
-      </a>
-    </h2>
-    
-    <time>
-      7月 17, 2022
-    </time>
+	</section>
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<div id="artitalk_main"></div>
+<script>
+      function load_artitalk() {
+    setTimeout(function() {
+        var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+        var src = 'https://unpkg.com/artitalk'
+        var script = document.createElement('script')
+        script.setAttribute('type','text/javascript')
+        script.onload = function() {
+           pjax_artitalk()
+        }
+        script.setAttribute('src', src)
+        HEAD.appendChild(script)
+    }, 1);
+};
+function pjax_artitalk() {
+    if(!document.querySelectorAll("#artitalk_main")[0])return;
+    new Artitalk({
+    serverURL: 'https://artitalknote.xsnetw.cf',
+    appId: '84vv4v343n7vnyvv3nc7n47nvyc3n48c38c', // Your LeanCloud appId
+    appKey: '348v3v3ocm4m344yc77c77c877c7466ccn64tbc674n73c4' // Your LeanCloud appKey
+});
+}
+load_artitalk();
+document.addEventListener('pjax:complete', function () {
+    pjax_artitalk();
+});
+</script>
+
+  	</div>
+	  
 		
-    
-    <div class='cats'>
-        <a href="/categories/Hexo/">Hexo</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>（别在意为啥要把它分类到Hexo。。。。）</p>
-
-    
-	  <div class="readmore">
-      <a href="/posts/54175/">阅读更多....</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Hexo/">Hexo</a>
-      
-        <a href="/tags/%E7%BB%9F%E8%AE%A1/">统计</a>
-      
-	  </div>
-    
-  </section>
+	
+	</section>
 </article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="animated rubberBand slideInRight  post reveal" style="visibility: visible;
-  -webkit-transform: scale(1);
-  opacity: 1;
-  transform: scale(1);
-  opacity: 1;
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-  transition: transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/posts/53958/">
-        Hexo-theme-SinGO
-      </a>
-    </h2>
-    
-    <time>
-      7月 12, 2022
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Hexo/">Hexo</a>
-    </div>
 
-  </section>
-  <section class="article typo">
-	  <h1 id="Hexo-Theme-SinGO"><a href="#Hexo-Theme-SinGO" class="headerlink" title="Hexo Theme SinGO"></a>Hexo Theme SinGO</h1><p><a target="_blank" rel="noopener" href="https://www.oscs1024.com/project/StarWEB890/hexo-theme-singo?ref=badge_small"><img src="https://www.oscs1024.com/platform/badge/StarWEB890/hexo-theme-singo.svg?size=small" alt="OSCS Status"></a>   <a target="_blank" rel="noopener" href="https://github.com/StarWEB890/hexo-theme-singo/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-brightgreen" alt="MIT"></a></p>
-<p>一个基于<a target="_blank" rel="noopener" href="https://github.com/stkevintan/hexo-theme-material-flow">hexo-theme-material-flow</a><del>重做</del>修改的主题</p>
-
-    
-	  <div class="readmore">
-      <a href="/posts/53958/">阅读更多....</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Hexo/">Hexo</a>
-      
-        <a href="/tags/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/">博客主题</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-</section>
-
+<script>
+	window.subData = {
+		title: '笔记',
+		tools: true
+	}
+</script>
 
       </div>
       <aside class='l_side'>
