@@ -428,6 +428,15 @@ function pjax() {
       <br>
     
     
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span id="busuanzi_container_site_pv">
+        <i class="fa fa-user"></i> 总访问量：<span id="busuanzi_value_site_pv"></span>&nbsp;次
+    </span> |
+    <span id="busuanzi_container_site_uv">
+      <i class="fa fa-eye"></i> 访客人数：<span id="busuanzi_value_site_uv"></span>&nbsp;人次
+    </span>
+    <br>
+    
     
       <script>
         (function () {
@@ -458,7 +467,7 @@ function pjax() {
   document.addEventListener('DOMContentLoaded', function () {
     var id = 'VS_' + unique();
     var script = document.createElement('script');
-    script.src = 'https://sin-go-visit-stat.vercel.app?p=' + id;
+    script.src = '[object Object]?p=' + id;
     script.referrerPolicy = 'no-referrer-when-downgrade';
 
     window[id] = function (data) {
