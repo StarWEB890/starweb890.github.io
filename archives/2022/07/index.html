@@ -180,27 +180,27 @@ function pjax() {
 	<nav>
 		
 			<a href="/" class="nav-fa fa-home nav">
-				home
+				<i class="fa fa-home" aria-hidden="true"></i>&nbsp;主页
 			</a>
 		
 			<a href="/archives/" class="nav-fa fa-archive nav">
-				archive
+				<i class="fa fa-archive" aria-hidden="true"></i>&nbsp;归档
 			</a>
 		
 			<a href="/note/" class="nav-fa fa-sticky-note-o nav">
-				note
+				<i class="fa fa-sticky-note-o" aria-hidden="true"></i>&nbsp;笔记
 			</a>
 		
 			<a href="/links/" class="nav-fa fa-external-link nav">
-				friend
+				<i class="fa fa-external-link" aria-hidden="true"></i>&nbsp;友链
 			</a>
 		
 			<a href="/about/" class="nav-fa fa-user-o nav">
-				about
+				<i class="fa fa-user-o" aria-hidden="true"></i>&nbsp;关于
 			</a>
 		
 			<a href="/update/" class="nav-fa fa-history nav">
-				update
+				<i class="fa fa-history" aria-hidden="true"></i>&nbsp;更新日志
 			</a>
 		
 	</nav>
@@ -638,6 +638,7 @@ function pjax() {
 	server="netease" 
 	type="playlist" 
 	id="7515491376"
+	volume="0.4"
 	
 	
 	fixed="true" 
@@ -657,17 +658,60 @@ function pjax() {
   <div>
     Copyright &copy; 2022 StarInno. All Rights Reserved.<br>
     
-      <a href="https://icp.gov.moe/?keyword=20210071" target="_blank">萌ICP备20210071号</a>
+      <a href="https://icp.gov.moe/?keyword=" target="_blank">萌ICP备20210071号</a>
       <br>
     
     
-      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-      <span id="busuanzi_container_site_pv">
-        <i class="fa fa-user"></i> 总访问量：<span id="busuanzi_value_site_pv"></span>&nbsp;次
-    </span> |
-    <span id="busuanzi_container_site_uv">
-      <i class="fa fa-eye"></i> 访客人数：<span id="busuanzi_value_site_uv"></span>&nbsp;人次
-    </span>
+    
+      <script>
+        (function () {
+  'use strict';
+
+  /**
+   * Completely random generation of unique strings
+   * @param {Number} size Generate the length of a random string
+   * @default 10
+   * @returns {String} Randomly generated string
+   */
+  function unique(size) {
+    size = size || 10;
+
+    var r = function r() {
+      return Math.random().toString(36).slice(2);
+    };
+
+    var result = r();
+
+    while (result.length < size) {
+      result += r();
+    }
+
+    return result.slice(0, size);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var id = 'VS_' + unique();
+    var script = document.createElement('script');
+    script.src = 'https://sin-go-visit-stat.vercel.app?p=' + id;
+    script.referrerPolicy = 'no-referrer-when-downgrade';
+
+    window[id] = function (data) {
+      for (var key in data) {
+        var dom = document.getElementById('vs_' + key);
+        if (dom) dom.innerText = data[key];
+      }
+
+      script.parentNode.removeChild(script);
+    };
+
+    document.head.appendChild(script);
+  });
+
+})();
+      </script>
+        <i class="fa fa-user"></i> 总访问量：<span id="vs_site_pv">0</span>&nbsp;次
+         |
+      <i class="fa fa-eye"></i> 访客人数：<span id="vs_site_uv">0</span>&nbsp;人次
     <br>
     
     Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> | Themes <a target="_blank" rel="noopener" href="https://github.com/StarWEB890/hexo-theme-singo">SinGO</a>
