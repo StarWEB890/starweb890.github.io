@@ -70,9 +70,6 @@ function pjax() {
     <link href='https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css' rel='stylesheet'>
   
   
-    <script type="text/javascript" color="#414141" opacity='1' zIndex="-2" count="100" src="/js/canvas-nest.min.js"></script>
-  
-  
 <link rel="stylesheet" href="/style.css">
 
   <script>
@@ -245,38 +242,227 @@ function pjax() {
 		<i class="fa fa-comment" aria-hidden="true" style="color: #4caf50;"></i>
 		评论
 	</h2>
-	
-  <div id="tcomment"></div>
-  <script>
-          function load_twikoo() {
-          setTimeout(function() {
-              var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
-              var src = 'https://cdn.staticfile.org/twikoo/1.5.11/twikoo.all.min.js'
-              var script = document.createElement('script')
-              script.setAttribute('type','text/javascript')
-              script.onload = function() {
-                 pjax_twikoo()
-              }
-              script.setAttribute('src', src)
-              HEAD.appendChild(script)
-          }, 1);
-      };
-      function pjax_twikoo() {
-          if(!document.querySelectorAll("#tcomment")[0])return;
-          twikoo.init({
-            envId: 'https://sin-go-twikoo.vercel.app/', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
-    el: '#tcomment', // 容器元素
-    region: '', // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
-    path: location.pathname, 
-    lang: 'zh-CN',
-          });
-      }
-      load_twikoo();
-      document.addEventListener('pjax:complete', function () {
-          pjax_twikoo();
-      });
-  </script>
+	<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+<style>
+    .waline-card {
+        margin: 1.5rem auto;
+    }
+    .waline-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+    #waline p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+    #waline blockquote p {
+        text-indent: 0.2rem;
+    }
+    #waline a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    #waline img {
+        max-width: 100%;
+        cursor: pointer;
+    }
+    #waline ol li {
+        list-style-type: decimal;
+    }
+    #waline ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+    #waline ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+    #waline ul li {
+        list-style-type: disc;
+    }
+    #waline ul ul li {
+        list-style-type: circle;
+    }
+    #waline table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+    #waline table, th, td {
+        border: 0;
+    }
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+    #waline table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+    #waline table td {
+        min-width: 80px;
+    }
+    #waline h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+    #waline h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+    #waline h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+    #waline h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+    #waline h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+    #waline h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+    #waline p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    #waline hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+    #waline blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+    #waline pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+    #waline code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+    #waline pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+    #waline pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+    #waline code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+    #waline [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+    #waline b,
+    strong {
+        font-weight: bold;
+    }
+    #waline dfn {
+        font-style: italic;
+    }
+    #waline small {
+        font-size: 85%;
+    }
+    #waline cite {
+        font-style: normal;
+    }
+    #waline mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+    #waline table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+    #waline table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+    #waline table td {
+        min-width: 80px;
+    }
+    #waline [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+    .wl-emoji-popup .wl-tabs {
+    height: 39px;
+}
+  </style>
   
+    <div id="waline" class="card-content" style="display: grid"></div>
+  
+  <script>
+function load_waline() {
+    setTimeout(function() {
+        var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+        var src = 'https://unpkg.com/@waline/client@v2/dist/waline.js'
+        var script = document.createElement('script')
+        script.setAttribute('type','text/javascript')
+        script.onload = function() {
+           pjax_waline()
+        }
+        script.setAttribute('src', src)
+        HEAD.appendChild(script)
+    }, 1);
+};
+function pjax_waline() {
+    if(!document.querySelectorAll("#waline")[0])return;
+    Waline.init(Object.assign({"serverURL":"https://wle.xsnetw.cf/","login":"force","meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"emoji":["//unpkg.com/@waline/emojis@1.0.1/weibo","https://emoji.shojo.cn/bili/src/小黄脸","//unpkg.com/@waline/emojis@1.0.1/bilibili","https://emoji.shojo.cn/bili/src/进击的冰糖","https://emoji.shojo.cn/bili/src/冰糖IO 蜕变·闪耀","https://emoji.shojo.cn/bili/src/枕边童话","https://emoji.shojo.cn/bili/src/咩栗","https://emoji.shojo.cn/bili/src/呜米","https://emoji.shojo.cn/bili/src/多多poi","https://emoji.shojo.cn/bili/src/穆小泠","https://emoji.shojo.cn/bili/src/早稻叽"]}, {
+        el: '#waline',
+    }));
+}
+load_waline();
+document.addEventListener('pjax:complete', function () {
+    pjax_waline();
+});
+  </script> 
 	</article>
 
 <script>
@@ -373,24 +559,49 @@ function pjax() {
 </section>
 
   <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+    
+</style>
+<div class="">
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="7515491376"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
 <script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
-<!-- require MetingJS -->
 <script src="https://unpkg.com/meting/dist/Meting.min.js"></script>
-<meting-js 
-	server="netease" 
-	type="playlist" 
-	id="7515491376"
-	volume="0.4"
-	
-	
-	fixed="true" 
-	
-	autoplay="false"
-	loop="all"
-	order="random"
-	preload="auto"
-	list-folded="true">
-</meting-js>
+
 
       </aside>
       <script>setLoadingBarProgress(60);</script>

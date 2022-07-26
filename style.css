@@ -1059,6 +1059,7 @@ ul.h-list > li {
   line-height: 40px;
   background: white;
   border: 1px solid #e6e7e6;
+  height: 100%;
   border-right: 0;
   transform: translate3d(280px, 0, 0);
   transition: all 0.24s ease;
