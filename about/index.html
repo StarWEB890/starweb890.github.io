@@ -55,7 +55,7 @@ function pjax() {
   <meta name="description" content="网站简介这个博客在21年的时候被我忘掉了，（实际上并没有完全忘，因为当时由于忙着RTalk、RChat和Rita2 Online的更新）之前的域名过期了，没办法只好换新域名，故此博客改名为：SinGO博客（原先我是想加入“十年之约”的，但由于没钱买域名，所以洗洗睡吧，有萌国ICP备案已经挺不错了。。。。。。）更新历史：SinGO博客更新历史 StarInno简介不会写简介，就简单介绍一下我自己吧！">
 <meta property="og:type" content="website">
 <meta property="og:title" content="关于网站">
-<meta property="og:url" content="http://www.xsnetw.cf/about/index.html">
+<meta property="og:url" content="https://blog.xsnetw.cf/about/index.html">
 <meta property="og:site_name" content="SinGO博客">
 <meta property="og:description" content="网站简介这个博客在21年的时候被我忘掉了，（实际上并没有完全忘，因为当时由于忙着RTalk、RChat和Rita2 Online的更新）之前的域名过期了，没办法只好换新域名，故此博客改名为：SinGO博客（原先我是想加入“十年之约”的，但由于没钱买域名，所以洗洗睡吧，有萌国ICP备案已经挺不错了。。。。。。）更新历史：SinGO博客更新历史 StarInno简介不会写简介，就简单介绍一下我自己吧！">
 <meta property="og:locale" content="zh_CN">
@@ -615,15 +615,57 @@ document.addEventListener('pjax:complete', function () {
       <br>
     
     
-      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-      <span id="busuanzi_container_site_pv">
-        <i class="fa fa-user"></i> 总访问量：<span id="busuanzi_value_site_pv"></span>&nbsp;次
-    </span> |
-    <span id="busuanzi_container_site_uv">
-      <i class="fa fa-eye"></i> 访客人数：<span id="busuanzi_value_site_uv"></span>&nbsp;人次
-    </span>
-    <br>
     
+      <script>
+        (function () {
+  'use strict';
+
+  /**
+   * Completely random generation of unique strings
+   * @param {Number} size Generate the length of a random string
+   * @default 10
+   * @returns {String} Randomly generated string
+   */
+  function unique(size) {
+    size = size || 10;
+
+    var r = function r() {
+      return Math.random().toString(36).slice(2);
+    };
+
+    var result = r();
+
+    while (result.length < size) {
+      result += r();
+    }
+
+    return result.slice(0, size);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var id = 'VS_' + unique();
+    var script = document.createElement('script');
+    script.src = 'https://sin-go-visit-stat.vercel.app/?p=' + id;
+    script.referrerPolicy = 'no-referrer-when-downgrade';
+
+    window[id] = function (data) {
+      for (var key in data) {
+        var dom = document.getElementById('vs_' + key);
+        if (dom) dom.innerText = data[key];
+      }
+
+      script.parentNode.removeChild(script);
+    };
+
+    document.head.appendChild(script);
+  });
+
+})();
+      </script>
+        <i class="fa fa-user"></i> 总访问量：<span id="vs_site_pv">0</span>&nbsp;次
+         |
+      <i class="fa fa-eye"></i> 访客人数：<span id="vs_site_uv">0</span>&nbsp;人次
+    <br>
     
     Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> | Themes <a target="_blank" rel="noopener" href="https://github.com/StarWEB890/hexo-theme-singo">SinGO</a>
     <br>

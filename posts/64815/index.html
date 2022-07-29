@@ -55,7 +55,7 @@ function pjax() {
   <meta name="description" content="认识Rita2已经快一年了（依稀记得它的前身：Prism），我是通过Rita2认识的Anti（实不相瞒，Anti的后端是我搞的） 在此期间，我遇上了多少快乐的事情，也遇见了————多少对我不快乐的事情">
 <meta property="og:type" content="article">
 <meta property="og:title" content="我在Anti群里的那些事">
-<meta property="og:url" content="http://www.xsnetw.cf/posts/64815/index.html">
+<meta property="og:url" content="https://blog.xsnetw.cf/posts/64815/index.html">
 <meta property="og:site_name" content="SinGO博客">
 <meta property="og:description" content="认识Rita2已经快一年了（依稀记得它的前身：Prism），我是通过Rita2认识的Anti（实不相瞒，Anti的后端是我搞的） 在此期间，我遇上了多少快乐的事情，也遇见了————多少对我不快乐的事情">
 <meta property="og:locale" content="zh_CN">
@@ -639,15 +639,57 @@ document.addEventListener('pjax:complete', function () {
       <br>
     
     
-      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-      <span id="busuanzi_container_site_pv">
-        <i class="fa fa-user"></i> 总访问量：<span id="busuanzi_value_site_pv"></span>&nbsp;次
-    </span> |
-    <span id="busuanzi_container_site_uv">
-      <i class="fa fa-eye"></i> 访客人数：<span id="busuanzi_value_site_uv"></span>&nbsp;人次
-    </span>
-    <br>
     
+      <script>
+        (function () {
+  'use strict';
+
+  /**
+   * Completely random generation of unique strings
+   * @param {Number} size Generate the length of a random string
+   * @default 10
+   * @returns {String} Randomly generated string
+   */
+  function unique(size) {
+    size = size || 10;
+
+    var r = function r() {
+      return Math.random().toString(36).slice(2);
+    };
+
+    var result = r();
+
+    while (result.length < size) {
+      result += r();
+    }
+
+    return result.slice(0, size);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var id = 'VS_' + unique();
+    var script = document.createElement('script');
+    script.src = 'https://sin-go-visit-stat.vercel.app/?p=' + id;
+    script.referrerPolicy = 'no-referrer-when-downgrade';
+
+    window[id] = function (data) {
+      for (var key in data) {
+        var dom = document.getElementById('vs_' + key);
+        if (dom) dom.innerText = data[key];
+      }
+
+      script.parentNode.removeChild(script);
+    };
+
+    document.head.appendChild(script);
+  });
+
+})();
+      </script>
+        <i class="fa fa-user"></i> 总访问量：<span id="vs_site_pv">0</span>&nbsp;次
+         |
+      <i class="fa fa-eye"></i> 访客人数：<span id="vs_site_uv">0</span>&nbsp;人次
+    <br>
     
     Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> | Themes <a target="_blank" rel="noopener" href="https://github.com/StarWEB890/hexo-theme-singo">SinGO</a>
     <br>

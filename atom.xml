@@ -3,11 +3,11 @@
   <title>SinGO博客</title>
   
   <subtitle>别人被孤独折磨，我却是享受孤独</subtitle>
-  <link href="http://www.xsnetw.cf/atom.xml" rel="self"/>
+  <link href="https://blog.xsnetw.cf/atom.xml" rel="self"/>
   
-  <link href="http://www.xsnetw.cf/"/>
+  <link href="https://blog.xsnetw.cf/"/>
   <updated>2022-07-24T11:27:38.835Z</updated>
-  <id>http://www.xsnetw.cf/</id>
+  <id>https://blog.xsnetw.cf/</id>
   
   <author>
     <name>StarInno</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Artitalk+CFWorker配置教程</title>
-    <link href="http://www.xsnetw.cf/posts/7406/"/>
-    <id>http://www.xsnetw.cf/posts/7406/</id>
+    <link href="https://blog.xsnetw.cf/posts/7406/"/>
+    <id>https://blog.xsnetw.cf/posts/7406/</id>
     <published>2022-07-24T09:48:35.000Z</published>
     <updated>2022-07-24T11:27:38.835Z</updated>
     
@@ -33,8 +33,8 @@
   
   <entry>
     <title>我在Anti群里的那些事</title>
-    <link href="http://www.xsnetw.cf/posts/64815/"/>
-    <id>http://www.xsnetw.cf/posts/64815/</id>
+    <link href="https://blog.xsnetw.cf/posts/64815/"/>
+    <id>https://blog.xsnetw.cf/posts/64815/</id>
     <published>2022-07-22T08:16:20.000Z</published>
     <updated>2022-07-22T09:15:07.422Z</updated>
     
@@ -49,8 +49,8 @@
   
   <entry>
     <title>Visit-Stat使用教程</title>
-    <link href="http://www.xsnetw.cf/posts/54175/"/>
-    <id>http://www.xsnetw.cf/posts/54175/</id>
+    <link href="https://blog.xsnetw.cf/posts/54175/"/>
+    <id>https://blog.xsnetw.cf/posts/54175/</id>
     <published>2022-07-17T02:50:01.000Z</published>
     <updated>2022-07-18T03:24:42.780Z</updated>
     
@@ -59,19 +59,19 @@
     
     
     
-    <category term="Hexo" scheme="http://www.xsnetw.cf/categories/Hexo/"/>
+    <category term="Hexo" scheme="https://blog.xsnetw.cf/categories/Hexo/"/>
     
     
-    <category term="Hexo" scheme="http://www.xsnetw.cf/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://blog.xsnetw.cf/tags/Hexo/"/>
     
-    <category term="统计" scheme="http://www.xsnetw.cf/tags/%E7%BB%9F%E8%AE%A1/"/>
+    <category term="统计" scheme="https://blog.xsnetw.cf/tags/%E7%BB%9F%E8%AE%A1/"/>
     
   </entry>
   
   <entry>
     <title>Hexo-theme-SinGO</title>
-    <link href="http://www.xsnetw.cf/posts/53958/"/>
-    <id>http://www.xsnetw.cf/posts/53958/</id>
+    <link href="https://blog.xsnetw.cf/posts/53958/"/>
+    <id>https://blog.xsnetw.cf/posts/53958/</id>
     <published>2022-07-12T14:00:52.000Z</published>
     <updated>2022-07-22T03:43:31.299Z</updated>
     
@@ -81,19 +81,19 @@
     
     
     
-    <category term="Hexo" scheme="http://www.xsnetw.cf/categories/Hexo/"/>
+    <category term="Hexo" scheme="https://blog.xsnetw.cf/categories/Hexo/"/>
     
     
-    <category term="Hexo" scheme="http://www.xsnetw.cf/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://blog.xsnetw.cf/tags/Hexo/"/>
     
-    <category term="博客主题" scheme="http://www.xsnetw.cf/tags/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/"/>
+    <category term="博客主题" scheme="https://blog.xsnetw.cf/tags/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/"/>
     
   </entry>
   
   <entry>
     <title>Rita2 Online（ROL）</title>
-    <link href="http://www.xsnetw.cf/posts/26258/"/>
-    <id>http://www.xsnetw.cf/posts/26258/</id>
+    <link href="https://blog.xsnetw.cf/posts/26258/"/>
+    <id>https://blog.xsnetw.cf/posts/26258/</id>
     <published>2022-07-02T02:04:41.000Z</published>
     <updated>2022-07-12T06:43:27.578Z</updated>
     
@@ -102,25 +102,25 @@
     
     
     
-    <category term="Rita2" scheme="http://www.xsnetw.cf/categories/Rita2/"/>
+    <category term="Rita2" scheme="https://blog.xsnetw.cf/categories/Rita2/"/>
     
     
-    <category term="旧设备访问" scheme="http://www.xsnetw.cf/tags/%E6%97%A7%E8%AE%BE%E5%A4%87%E8%AE%BF%E9%97%AE/"/>
+    <category term="旧设备访问" scheme="https://blog.xsnetw.cf/tags/%E6%97%A7%E8%AE%BE%E5%A4%87%E8%AE%BF%E9%97%AE/"/>
     
-    <category term="Rita2" scheme="http://www.xsnetw.cf/tags/Rita2/"/>
+    <category term="Rita2" scheme="https://blog.xsnetw.cf/tags/Rita2/"/>
     
-    <category term="在线视频" scheme="http://www.xsnetw.cf/tags/%E5%9C%A8%E7%BA%BF%E8%A7%86%E9%A2%91/"/>
+    <category term="在线视频" scheme="https://blog.xsnetw.cf/tags/%E5%9C%A8%E7%BA%BF%E8%A7%86%E9%A2%91/"/>
     
-    <category term="在线音乐" scheme="http://www.xsnetw.cf/tags/%E5%9C%A8%E7%BA%BF%E9%9F%B3%E4%B9%90/"/>
+    <category term="在线音乐" scheme="https://blog.xsnetw.cf/tags/%E5%9C%A8%E7%BA%BF%E9%9F%B3%E4%B9%90/"/>
     
-    <category term="在线游戏" scheme="http://www.xsnetw.cf/tags/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/"/>
+    <category term="在线游戏" scheme="https://blog.xsnetw.cf/tags/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/"/>
     
   </entry>
   
   <entry>
     <title>Rita2 RChat聊天室</title>
-    <link href="http://www.xsnetw.cf/posts/35605/"/>
-    <id>http://www.xsnetw.cf/posts/35605/</id>
+    <link href="https://blog.xsnetw.cf/posts/35605/"/>
+    <id>https://blog.xsnetw.cf/posts/35605/</id>
     <published>2022-07-02T02:03:48.000Z</published>
     <updated>2022-07-02T04:50:30.834Z</updated>
     
@@ -129,21 +129,21 @@
     
     
     
-    <category term="Rita2" scheme="http://www.xsnetw.cf/categories/Rita2/"/>
+    <category term="Rita2" scheme="https://blog.xsnetw.cf/categories/Rita2/"/>
     
     
-    <category term="旧设备访问" scheme="http://www.xsnetw.cf/tags/%E6%97%A7%E8%AE%BE%E5%A4%87%E8%AE%BF%E9%97%AE/"/>
+    <category term="旧设备访问" scheme="https://blog.xsnetw.cf/tags/%E6%97%A7%E8%AE%BE%E5%A4%87%E8%AE%BF%E9%97%AE/"/>
     
-    <category term="聊天室" scheme="http://www.xsnetw.cf/tags/%E8%81%8A%E5%A4%A9%E5%AE%A4/"/>
+    <category term="聊天室" scheme="https://blog.xsnetw.cf/tags/%E8%81%8A%E5%A4%A9%E5%AE%A4/"/>
     
-    <category term="Rita2" scheme="http://www.xsnetw.cf/tags/Rita2/"/>
+    <category term="Rita2" scheme="https://blog.xsnetw.cf/tags/Rita2/"/>
     
   </entry>
   
   <entry>
     <title>Rita2 RTalk微博</title>
-    <link href="http://www.xsnetw.cf/posts/41161/"/>
-    <id>http://www.xsnetw.cf/posts/41161/</id>
+    <link href="https://blog.xsnetw.cf/posts/41161/"/>
+    <id>https://blog.xsnetw.cf/posts/41161/</id>
     <published>2022-07-01T13:08:37.000Z</published>
     <updated>2022-07-02T03:56:25.424Z</updated>
     
@@ -152,14 +152,14 @@
     
     
     
-    <category term="Rita2" scheme="http://www.xsnetw.cf/categories/Rita2/"/>
+    <category term="Rita2" scheme="https://blog.xsnetw.cf/categories/Rita2/"/>
     
     
-    <category term="旧设备访问" scheme="http://www.xsnetw.cf/tags/%E6%97%A7%E8%AE%BE%E5%A4%87%E8%AE%BF%E9%97%AE/"/>
+    <category term="旧设备访问" scheme="https://blog.xsnetw.cf/tags/%E6%97%A7%E8%AE%BE%E5%A4%87%E8%AE%BF%E9%97%AE/"/>
     
-    <category term="Rita2" scheme="http://www.xsnetw.cf/tags/Rita2/"/>
+    <category term="Rita2" scheme="https://blog.xsnetw.cf/tags/Rita2/"/>
     
-    <category term="微博" scheme="http://www.xsnetw.cf/tags/%E5%BE%AE%E5%8D%9A/"/>
+    <category term="微博" scheme="https://blog.xsnetw.cf/tags/%E5%BE%AE%E5%8D%9A/"/>
     
   </entry>
   
